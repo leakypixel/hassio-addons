@@ -12,5 +12,5 @@ case "$1" in
 esac
 
 curl -s -X "$OPERATION" -d "$CERTBOT_VALIDATION" \
-  --user mail@lpapi.io:Jak34Jil# \
-  "https://box.lpapi.io/admin/dns/custom/$DOMAIN/txt"
+  --user "$LE_MIAB_USERNAME":"$LE_MIAB_PASWORD" \
+  "$LE_MIAB_DOMAIN/admin/dns/custom/$DOMAIN/txt"

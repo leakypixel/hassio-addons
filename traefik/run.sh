@@ -2,8 +2,6 @@
 
 ls -la /share
 ls -laR /share
-echo $EXEC_PATH
-
 
 bashio::log.info "Ensuring SSL directory..."
 mkdir -p /ssl/traefik/
@@ -15,6 +13,7 @@ bashio::log.info "Static config generated"
 bashio::log.info "Extracting environment variables..."
 ENV_VARS=$(j2 /etc/traefik/env.j2 /data/options.json)
 
+echo ${ENV_VARS}
 if [ -z "$ENV_VARS" ]; then
   bashio::log.info "No additional environment variables found"
 else
