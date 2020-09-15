@@ -20,7 +20,7 @@
     "panel_icon": "mdi:earth-arrow-right",
     "map": [
         "config",
-        "share",
+        "share:rw",
         "ssl:rw"
     ],
     "options": {
