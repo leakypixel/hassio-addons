@@ -6,6 +6,7 @@ ARG BUILD_ARCH
 ARG TRAEFIK_VERSION
 
 COPY run.sh /
+COPY set-dns-txt.sh /usr/local/bin
 
 RUN apk add --no-cache python3 py3-pip nginx && \
     pip3 install "j2cli[yaml]" && \
